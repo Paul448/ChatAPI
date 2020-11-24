@@ -13,9 +13,14 @@ namespace RestAPI
 {
     public class Global : HttpApplication
     {
-        private Controller _Verwalter;
+        private static Controller _Verwalter;
 
-        public Controller Verwalter { get => _Verwalter; set => _Verwalter = value; }
+        public static Controller Verwalter { get => _Verwalter; set => _Verwalter = value; }
+
+        public Global()
+        {
+            Verwalter = new Controller();
+        }
 
         void Application_Start(object sender, EventArgs e)
         {
@@ -24,24 +29,7 @@ namespace RestAPI
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-            if(this.Verwalter is null)
-            {
-                this.Verwalter = new Controller();
-            }
-            else
-            {
-
-            }
-
-
             
-        }
-
-        public void TEST()
-        {
-
-
         }
     }
 }

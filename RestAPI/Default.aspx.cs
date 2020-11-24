@@ -17,18 +17,19 @@ namespace RestAPI
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            if(this.Verwalter is null)
-            {
-                this.Verwalter = new Controller();
-            }
-            else
-            {
 
-            }
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+           if(this.Session.Count <= 0)
+            {
+                this.Session["Verwalter"] = this.Verwalter = Global.Verwalter;
+            }
+           else
+            {
+                Global.Verwalter = this.Verwalter = (Controller)this.Session["Verwalter"];
+            }
+
         }
 
         protected void btnSend_Click(object sender, EventArgs e)
