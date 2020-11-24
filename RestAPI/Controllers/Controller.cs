@@ -14,7 +14,7 @@ namespace RestAPI
         public List<Nachricht> MSGLIST { get => _MSGLIST; set => _MSGLIST = value; }
         public Controller()
         {
-
+            Global
         }
 
         public string SendMSG(string URL, string txt, ref ListBox lb)

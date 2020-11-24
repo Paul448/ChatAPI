@@ -6,14 +6,18 @@ using System.Net.Http;
 using System.Web.Http;
 using RestAPI;
 
-namespace RestAPI.Controllers
+namespace RestAPI
 {
     public class HauptController : ApiController
     {
+        private Controller _Verwalter;
+        public Controller Verwalter { get => _Verwalter; set => _Verwalter = value; }
+
         // GET: api/Haupt
         public string Get(string value="")
         {
             Nachricht NR = new Nachricht(value);
+            
             return "OK";
         }
 
