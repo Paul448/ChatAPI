@@ -8,10 +8,12 @@ namespace RestAPI
     public class Nachricht
     {
         private string _Text;
-        private string _Send;
+        private string _Sender;
+        private DateTime _Time;
 
         public string Text { get => _Text; set => _Text = value; }
-        public string Send { get => _Send; set => _Send = value; }
+        public string Sender { get => _Sender; set => _Sender = value; }
+        public DateTime Time { get => _Time; set => _Time = value; }
 
         public Nachricht()
         {
@@ -22,6 +24,12 @@ namespace RestAPI
         {
             this.Text = Txt;
 
+        }
+
+        public Nachricht(string Txt, DateTime Time)
+        {
+            this.Text = Txt;
+            this.Time = Time;
         }
     }
 }

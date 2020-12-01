@@ -36,5 +36,15 @@ namespace RestAPI
         {
             this.Verwalter.SendMSG(txtURL.Text, txtNachricht.Text, ref LogList);
         }
+
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            ChatLog.Items.Clear();
+            List<Nachricht> LNR = Global.Verwalter.MSGLIST;
+            for(int index = 0; index < LNR.Count;index++)
+            {
+                ChatLog.Items.Add("Nachricht: " + LNR[index].Text);
+            }
+        }
     }
 }

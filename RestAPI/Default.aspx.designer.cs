@@ -40,13 +40,13 @@ namespace RestAPI {
         protected global::System.Web.UI.WebControls.Button btnSend;
         
         /// <summary>
-        /// lblStatus-Steuerelement
+        /// ChatLog-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblStatus;
+        protected global::System.Web.UI.WebControls.ListBox ChatLog;
         
         /// <summary>
         /// LogList-Steuerelement
@@ -56,5 +56,14 @@ namespace RestAPI {
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox LogList;
+        
+        /// <summary>
+        /// Timer1-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.Timer Timer1;
     }
 }

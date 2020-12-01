@@ -14,12 +14,34 @@ namespace RestAPI
         public Controller Verwalter { get => _Verwalter; set => _Verwalter = value; }
 
         // GET: api/Haupt
-        public string Get(string value="")
+        public string Get(string valueTXT="")
         {
-            Nachricht NR = new Nachricht(value);
-            
-            return "OK";
+            try
+            {
+                Nachricht NR = new Nachricht(valueTXT);
+                Global.Verwalter.MSGLIST.Add(NR);
+                return "OK";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
         }
+
+        /*public string Get(string valueTXT1 = "", string DTime="")
+        {
+            try
+            {
+                DateTime DT = Convert.ToDateTime(DTime);
+                Nachricht NR = new Nachricht(valueTXT1, DT);
+                Global.Verwalter.MSGLIST.Add(NR);
+                return "OK";
+            }
+            catch(Exception e)
+            {
+                return e.ToString();
+            }
+        } */
 
         // GET: api/Haupt/5
         public string Get(int id)
