@@ -35,7 +35,7 @@ namespace RestAPI
 
         protected void btnSend_Click(object sender, EventArgs e)
         {
-            LogList.Items.Add("Gesendet: " + txtNachricht.Text);
+            LogList.Items.Add("Gesendet(" + DateTime.Now.ToString("HH:mm") + "): " + txtNachricht.Text);
             Verwalter.SendMSG(txtURL.Text, txtNachricht.Text);
             
         }
@@ -46,7 +46,7 @@ namespace RestAPI
             List<Nachricht> LNR = Global.Verwalter.MSGLIST;
             for(int index = 0; index < LNR.Count;index++)
             {
-                ChatLog.Items.Add("Nachricht: " + LNR[index].Text);
+                ChatLog.Items.Add("Nachricht(" + LNR[index].Time.ToString("HH:mm") + "): " + LNR[index].Text);
             }
         }
     }

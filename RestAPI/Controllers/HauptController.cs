@@ -18,7 +18,7 @@ namespace RestAPI
         {
             try
             {
-                Nachricht NR = new Nachricht(valueTXT);
+                Nachricht NR = new Nachricht(valueTXT, DateTime.Now);
                 Global.Verwalter.MSGLIST.Add(NR);
                 return "OK";
             }
