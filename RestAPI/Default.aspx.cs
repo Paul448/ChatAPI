@@ -6,6 +6,7 @@ using System.Net;
 using System.Web.UI;
 using System.IO;
 using System.Web.UI.WebControls;
+using System.Threading.Tasks;
 
 namespace RestAPI
 {
@@ -34,7 +35,9 @@ namespace RestAPI
 
         protected void btnSend_Click(object sender, EventArgs e)
         {
-            this.Verwalter.SendMSG(txtURL.Text, txtNachricht.Text, ref LogList);
+            LogList.Items.Add("Gesendet: " + txtNachricht.Text);
+            Verwalter.SendMSG(txtURL.Text, txtNachricht.Text);
+            
         }
 
         protected void Timer1_Tick(object sender, EventArgs e)

@@ -5,6 +5,7 @@ using System.Web;
 using System.Net;
 using System.IO;
 using System.Web.UI.WebControls;
+using System.Threading.Tasks;
 
 namespace RestAPI
 {
@@ -17,17 +18,16 @@ namespace RestAPI
             MSGLIST = new List<Nachricht>();
         }
 
-        public string SendMSG(string URL, string txt, ref ListBox lb)
+        public async Task SendMSG(string URL, string txt)
         {
             WebRequest Req = WebRequest.Create(URL + "api/Haupt?valueTXT=" + txt);
             Req.Method = "GET";
-            WebResponse Res = Req.GetResponse();
+            WebResponse Res = await Req.GetResponseAsync();
             Stream Response = Res.GetResponseStream();
             StreamReader SR = new StreamReader(Response);
             string Text = SR.ReadToEnd();
-            lb.Items.Add("Gesendet: " + txt);
+            //lb.Items.Add("Gesendet: " + txt);
             //lb.Items.Add("HTTP-Code: " + Response.);
-            return Text;
         }
     }
 }

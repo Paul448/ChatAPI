@@ -9,5 +9,5 @@
     <asp:ListBox ID="ChatLog" runat="server" Width="230"></asp:ListBox> <br />
     Protokoll: <br />
     <asp:ListBox ID="LogList" runat="server" Width="160px"></asp:ListBox>
-    <asp:Timer ID="Timer1" runat="server" Interval="5000" OnTick="Timer1_Tick"></asp:Timer>
+    <asp:Timer ID="Timer1" runat="server" Interval="1500" OnTick="Timer1_Tick"></asp:Timer>
 </asp:Content>
