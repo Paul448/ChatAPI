@@ -7,11 +7,13 @@
 // </automatisch generiert>
 //------------------------------------------------------------------------------
 
-namespace RestAPI {
-    
-    
-    public partial class _Default {
-        
+namespace RestAPI
+{
+
+
+    public partial class _Default
+    {
+
         /// <summary>
         /// txtURL-Steuerelement
         /// </summary>
@@ -20,7 +22,7 @@ namespace RestAPI {
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtURL;
-        
+
         /// <summary>
         /// txtNachricht-Steuerelement
         /// </summary>
@@ -29,7 +31,7 @@ namespace RestAPI {
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNachricht;
-        
+
         /// <summary>
         /// btnSend-Steuerelement
         /// </summary>
@@ -38,7 +40,16 @@ namespace RestAPI {
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSend;
-        
+
+        /// <summary>
+        /// UP1-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UP1;
+
         /// <summary>
         /// ChatLog-Steuerelement
         /// </summary>
@@ -47,16 +58,7 @@ namespace RestAPI {
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox ChatLog;
-        
-        /// <summary>
-        /// LogList-Steuerelement
-        /// </summary>
-        /// <remarks>
-        /// Automatisch generiertes Feld
-        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox LogList;
-        
+
         /// <summary>
         /// Timer1-Steuerelement
         /// </summary>
@@ -65,5 +67,14 @@ namespace RestAPI {
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
         protected global::System.Web.UI.Timer Timer1;
+
+        /// <summary>
+        /// LogList-Steuerelement
+        /// </summary>
+        /// <remarks>
+        /// Automatisch generiertes Feld
+        /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox LogList;
     }
 }
